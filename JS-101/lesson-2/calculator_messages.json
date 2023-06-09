@@ -1,10 +1,24 @@
 {
-  "welcome": "Welcome to the Calculator!",
-  "firstNumber": "What's the first number?",
-  "secondNumber": "What's the second number?",
-  "invalidNumber": "Hmm... that doesn't look like a valid number",
-  "selectOperation": "What operation would you like to perform? \n1) Add 2) Subtract 3) Mulitply 4) Divide",
-  "invalidOperation": "Must choose 1, 2, 3 or 4",
-  "result": "The result is",
-  "runAgain": "Would you like to run another calculation? (y/n)"
+  "language": "Choose your language/Wähle deine Sprache\n1) EN\n2) DE",
+  "invalidLanguage": "Invalid Language, enter 1 for EN, 2 for DE/Ungültige Sprache, geben Sie 1 für EN und 2 für DE ein",
+  "EN": {
+    "welcome": "Welcome to the Calculator!",
+    "firstNumber": "What's the first number?",
+    "secondNumber": "What's the second number?",
+    "invalidNumber": "Hmm... that doesn't look like a valid number",
+    "selectOperation": "What operation would you like to perform? \n1) Add 2) Subtract 3) Multiply 4) Divide",
+    "invalidOperation": "Must choose 1, 2, 3 or 4",
+    "result": "The result is",
+    "runAgain": "Would you like to run another calculation? (y/n)"
+  },
+  "DE": {
+    "welcome": "Willkommen beim Rechner!",
+    "firstNumber": "Wie lautet die erste Zahl?",
+    "secondNumber": "Wie lautet die zweite Zahl?",
+    "invalidNumber": "Hmm... das sieht nicht nach einer gültigen Zahl aus",
+    "selectOperation": "Welche Operation möchten Sie durchführen? \n1) Addieren 2) Subtrahieren 3) Multiplizieren 4) Dividieren",
+    "invalidOperation": "Muss 1, 2, 3 oder 4 wählen",
+    "result": "Das Ergebnis ist",
+    "runAgain": "Möchten Sie eine weitere Berechnung durchführen? (j/n)"
+  }
 }

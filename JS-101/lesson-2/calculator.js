@@ -10,37 +10,49 @@ function invalidNumber(num) {
 }
 
 let run = true;
+let language;
 
-prompt(MESSAGES['welcome']);
+prompt(MESSAGES.language);
+languageSelect = readline.question();
+while (languageSelect !== '1' && languageSelect !== '2') {
+  prompt(MESSAGES.invalidLanguage);
+  languageSelect = readline.question();
+}
+
+if (languageSelect === '1') {
+  language = 'EN';
+} else if (languageSelect === '2') {
+  language = 'DE';
+}
+
+prompt(MESSAGES[language].welcome);
 
 function calculate() {
   // Ask user for first number
-  prompt("What's the first number?");
+  prompt(MESSAGES[language].firstNumber);
   let number1 = readline.question();
 
   while (invalidNumber(number1)) {
-    prompt("Hmm... that doesn't look like a valid number");
+    prompt(MESSAGES[language].invalidNumber);
     number1 = readline.question();
   }
 
   // Ask user for second number
-  prompt("What's the second number?");
+  prompt(MESSAGES[language].secondNumber);
 
   let number2 = readline.question();
 
   while (invalidNumber(number2)) {
-    prompt("Hmm... that doesn't look like a valid number");
+    prompt(MESSAGES[language].invalidNumber);
     number2 = readline.question();
   }
 
   // Ask user for an operation to perform
-  prompt(
-    'What operation would you like to perform? \n1) Add 2) Subtract 3) Mulitply 4) Divide '
-  );
+  prompt(MESSAGES[language].selectOperation);
   let operation = readline.question();
 
   while (![1, 2, 3, 4].includes(+operation)) {
-    prompt('Must choose 1, 2, 3 or 4');
+    prompt(MESSAGES[language].invalidOperation);
     operation = readline.question();
   }
 
@@ -63,12 +75,13 @@ function calculate() {
   }
 
   // Print the result to the terminal
-  console.log(`The result is ${output}\n`);
+  console.log(MESSAGES[language].result + ' ' + output);
 
-  prompt('Would you like to run another calculation? (y/n)');
+  prompt(MESSAGES[language].runAgain);
   let runAgain = readline.question();
 
-  if (runAgain[0].toLowerCase() !== 'y') run = false;
+  if (runAgain[0].toLowerCase() !== 'y' || runAgain[0].toLowerCase() !== 'j')
+    run = false;
 }
 
 while (run) {
