@@ -59,5 +59,3 @@ if (monthlyInterestRate === 0) {
 
 // Display monthly payment
 prompt(`Your monthly payment is $${monthlyPayment.toFixed(2)}`);
-
-// Ask to calculate again?
